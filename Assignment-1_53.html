@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="dinfo.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <img id="profilePic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOH2aZnIHWjMQj2lQUOWIL2f4Hljgab0ecZQ&s" alt="Profile Picture" class="profile-picture">
+        <h1 id="name">Hi, I'm Prathmesh Kumbhar!</h1>
+        <p id="profession">Aspiring Web Developer</p>
+        <button onclick="updateBio()">Update Bio</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p id="bio">I am a passionate web developer who loves creating beautiful and functional websites. I enjoy problem-solving and learning new technologies.</p>
+    </section>
+    <hr>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive Design</li>
+        </ul>
+    </section>
+    <hr>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p> Citizen Eye: A Political Awareness Platform
+                
+                Citizen Eye is an innovative political website dedicated to empowering citizens with transparent and unbiased information. The platform serves as a digital hub for political insights, featuring up-to-date news, in-depth analysis, and interactive tools to help users stay informed about policies, elections, and governance.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>A Healthcare Website
+
+                This healthcare website is designed to make medical information and services easily accessible. It offers features like health tips, a symptom checker, a directory of healthcare professionals, and online appointment booking. The platform focuses on improving health awareness and simplifying access to quality care for users.</p>
+        </div>
+    </section>
+    <hr>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: prathmeshkumbhar12@gmail.com</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+    <div class="full-background"></div>
+
+    <script>
+        function updateBio() {
+            let name = prompt("Enter your name:");
+            if (name) {
+                document.getElementById("name").innerText = `Hi, I'm ${name}!`;
+            }
+
+            let profession = prompt("Enter your profession:");
+            if (profession) {
+                document.getElementById("profession").innerText = profession;
+            }
+
+            let bio = prompt("Enter a short bio about yourself:");
+            if (bio) {
+                document.getElementById("bio").innerText = bio;
+            }
+
+            let profilePicUrl = prompt("Enter the URL of your profile picture:");
+            if (profilePicUrl) {
+                document.getElementById("profilePic").src = profilePicUrl;
+            }
+        }
+    </script>
+    <body onload="updateBio()">
+
+</body>
+</html>
